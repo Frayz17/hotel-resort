@@ -12,10 +12,12 @@ export default styled(Link)`
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 
+  &:hover {
+    color: var(--primaryColor);
+  }
+
   @media screen and (min-width: 768px) {
-    & {
-      margin: 0 1rem;
-      padding: 0.5rem 0;
-    }
+    margin: 0 1rem;
+    padding: 0.5rem 0;
   }
 `;

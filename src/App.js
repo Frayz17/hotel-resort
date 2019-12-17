@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Menu from 'modules/Menu';
 import { Home, NotFound, Rooms, SingleRoom } from 'routes';
 

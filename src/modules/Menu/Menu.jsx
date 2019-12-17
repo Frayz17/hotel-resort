@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import logo from 'assets/images/logo.svg';
-import { FaAlignRight } from 'react-icons/fa';
-import Link from 'components/Link';
-import { LinksBox, NavBar, NavContainer, NavButton } from './styled';
+import Image from 'components/Image';
+import {
+  NavigationBar,
+  LinksBox,
+  NavLink,
+  NavContainer,
+  NavButton,
+  NavHeader,
+  NavIcon
+} from './styled';
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +19,22 @@ export default () => {
   };
 
   return (
-    <NavBar>
+    <NavigationBar>
       <NavContainer>
         <NavHeader>
-          <Link to="/">Home</Link>
-          <Button type="button"></Button>
+          <NavLink to='/'>
+            <Image src={logo} alt='logo' />
+          </NavLink>
+          <NavButton type='button' onClick={handleToggle}>
+            <NavIcon />
+          </NavButton>
         </NavHeader>
-        <LinksBox>
-          <Link to="/rooms">Rooms</Link>
+
+        <LinksBox height={isOpen ? 100 : 0}>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/rooms'>Rooms</NavLink>
         </LinksBox>
       </NavContainer>
-    </NavBar>
+    </NavigationBar>
   );
 };
