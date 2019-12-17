@@ -4,9 +4,12 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
+import GlobalStyles from './GlobalStyles';
+
 ReactDOM.render(
   <Router>
     <App />
+    <GlobalStyles />
   </Router>,
   document.getElementById('root')
 );
