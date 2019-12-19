@@ -8,7 +8,7 @@ const Component = styled.img`
 let index = 0;
 let count = 0;
 
-const listener = nowIndex => e => {
+const listener = (nowIndex) => (e) => {
   if (
     count > index &&
     (index === nowIndex || ((e || {}).detail || {}).newIndex === index)
@@ -26,12 +26,11 @@ const listener = nowIndex => e => {
       };
       img.onerror = () => {
         dispatchNextImg(currentIndex);
-        console.log('src', cahcedData[currentIndex].src);
       };
     }, 0);
   }
 };
-const dispatchNextImg = currentIndex => {
+const dispatchNextImg = (currentIndex) => {
   setTimeout(() => {
     document.dispatchEvent(
       new CustomEvent('onImgLoaded', {

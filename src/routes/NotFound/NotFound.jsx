@@ -1,5 +1,10 @@
 import React from 'react';
+import Jumbotron from 'modules/Jumbotron';
 
 export default () => {
-  return <div>Not Found page 404</div>;
+  return (
+    <>
+      <Jumbotron />
+    </>
+  );
 };
