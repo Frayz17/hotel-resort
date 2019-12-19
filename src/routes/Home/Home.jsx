@@ -1,6 +1,7 @@
 import React from 'react';
 import Jumbotron from 'modules/Jumbotron';
 import Banner from 'modules/Banner';
+import { LinkPrimary } from 'components/Link';
 
 export default () => {
   return (
@@ -8,8 +9,9 @@ export default () => {
       <Jumbotron>
         <Banner
           title={'luxurious rooms'}
-          subtitle={'deluxe rooms starting at $299'}
-        />
+          subtitle={'deluxe rooms starting at $299'}>
+          <LinkPrimary to='/rooms'>Our Rooms</LinkPrimary>
+        </Banner>
       </Jumbotron>
     </>
   );

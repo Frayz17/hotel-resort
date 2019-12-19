@@ -1,6 +1,7 @@
 import React from 'react';
 import Jumbotron from 'modules/Jumbotron';
 import Banner from 'modules/Banner';
+import { LinkPrimary } from 'components/Link';
 
 import room2Img from 'assets/images/room-2.jpeg';
 
@@ -13,7 +14,9 @@ export default () => {
   return (
     <>
       <Jumbotron cssStr={cssStrJumbotron}>
-        <Banner title={'our rooms'} />
+        <Banner title={'our rooms'}>
+          <LinkPrimary to='/'>Return Home</LinkPrimary>
+        </Banner>
       </Jumbotron>
     </>
   );
