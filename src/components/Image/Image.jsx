@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Block from 'components/Block';
 
-const Component = styled.img`
-  display: block;
-`;
+const Component = styled.img``;
 let index = 0;
 let count = 0;
 

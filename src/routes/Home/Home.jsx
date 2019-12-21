@@ -3,8 +3,9 @@ import Jumbotron from 'modules/Jumbotron';
 import Banner from 'modules/Banner';
 import Offers from 'modules/Offers';
 import { LinkPrimary } from 'components/Link';
+import FeaturedRooms from 'modules/FeaturedRooms';
 
-export default () => {
+export default React.memo(() => {
   return (
     <>
       <Jumbotron>
@@ -16,6 +17,7 @@ export default () => {
         </Banner>
       </Jumbotron>
       <Offers />
+      <FeaturedRooms />
     </>
   );
-};
+});

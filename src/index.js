@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { RoomProvider } from 'Context/';
 
 import GlobalStyles from './GlobalStyles';
 
 ReactDOM.render(
-  <Router>
-    <App />
-    <GlobalStyles />
-  </Router>,
+  <RoomProvider>
+    <Router>
+      <App />
+      <GlobalStyles />
+    </Router>
+  </RoomProvider>,
   document.getElementById('root')
 );
 

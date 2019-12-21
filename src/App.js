@@ -8,16 +8,16 @@ function App() {
     <>
       <Menu />
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path='/rooms'>
+        <Route exact path="/rooms">
           <Rooms />
         </Route>
-        <Route exact path='/rooms/:id'>
+        <Route exact path="/rooms/:id">
           <SingleRoom />
         </Route>
-        <Route path='*'>
+        <Route path="*">
           <NotFound />
         </Route>
       </Switch>

@@ -9,7 +9,7 @@ import {
   OfferWrapper
 } from './styled';
 
-export default () => {
+export default React.memo(() => {
   return (
     <OffersSection>
       <SectionTitle title={'services'} />
@@ -27,4 +27,4 @@ export default () => {
       </OfferWrapper>
     </OffersSection>
   );
-};
+});
