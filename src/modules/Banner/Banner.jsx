@@ -1,17 +1,17 @@
 import React from 'react';
+import { DecorLine } from 'components/Decor';
 import {
   BannerBlock,
-  BannerTitle1,
-  BannerTypography,
-  DecorLine
+  ResponsiveTypographyTitle1,
+  FsMgTypography
 } from './styled';
 
 export default ({ children, title, subtitle }) => {
   return (
     <BannerBlock>
-      <BannerTitle1>{title}</BannerTitle1>
+      <ResponsiveTypographyTitle1>{title}</ResponsiveTypographyTitle1>
       <DecorLine />
-      <BannerTypography>{subtitle}</BannerTypography>
+      <FsMgTypography>{subtitle}</FsMgTypography>
       {children}
     </BannerBlock>
   );

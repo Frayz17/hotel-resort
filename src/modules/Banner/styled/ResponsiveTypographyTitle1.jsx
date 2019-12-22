@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Title1 } from 'components/Title';
+import { TypographyTitle1 } from 'components/Typography';
 
-const BannerTitle1 = styled(Title1)`
+const ResponsiveTypographyTitle1 = styled(TypographyTitle1)`
   font-size: 2.5rem;
 
   @media screen and (min-width: 576px) {
@@ -12,4 +12,4 @@ const BannerTitle1 = styled(Title1)`
   }
 `;
 
-export default BannerTitle1;
+export default ResponsiveTypographyTitle1;

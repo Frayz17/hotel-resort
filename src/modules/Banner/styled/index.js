@@ -1,6 +1,5 @@
 import BannerBlock from './BannerBlock.jsx';
-import BannerTitle1 from './BannerTitle1.jsx';
-import BannerTypography from './BannerTypography.jsx';
-import DecorLine from './DecorLine.jsx';
+import ResponsiveTypographyTitle1 from './ResponsiveTypographyTitle1.jsx';
+import FsMgTypography from './FsMgTypography.jsx';
 
-export { BannerBlock, BannerTitle1, BannerTypography, DecorLine };
+export { BannerBlock, ResponsiveTypographyTitle1, FsMgTypography };

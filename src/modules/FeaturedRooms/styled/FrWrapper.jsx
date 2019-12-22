@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Block from 'components/Block';
 
-const FrWrapper = styled.div`
+const FrWrapper = styled(Block)`
   width: 80vw;
   margin: 0 auto;
   display: grid;

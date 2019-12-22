@@ -3,11 +3,11 @@ import SectionTitle from 'modules/SectionTitle';
 import { RoomContext } from 'Context/';
 import Room from 'modules/Room';
 import Loading from 'modules/Loading';
-import { FrSection, FrWrapper } from './styled';
+import { FrWrapper } from './styled';
+import Section from 'components/Section';
 
 export default React.memo(() => {
   const contextType = React.useContext(RoomContext);
-  console.log(contextType);
 
   let { loading, featuredRooms: rooms } = contextType;
 
@@ -16,9 +16,9 @@ export default React.memo(() => {
   });
 
   return (
-    <FrSection>
-      <SectionTitle title="featured rooms" />
+    <Section style={{ padding: '5rem 0' }}>
+      <SectionTitle title='featured rooms' />
       <FrWrapper>{loading ? <Loading /> : rooms}</FrWrapper>
-    </FrSection>
+    </Section>
   );
 });
