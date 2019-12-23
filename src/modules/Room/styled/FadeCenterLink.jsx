@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { LinkPrimary } from 'components/Link';
 
-const RoomLink = styled(LinkPrimary)`
+const FadeCenterLink = styled(LinkPrimary)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,4 +9,4 @@ const RoomLink = styled(LinkPrimary)`
   transition: all 0.3s linear;
 `;
 
-export default RoomLink;
+export default FadeCenterLink;

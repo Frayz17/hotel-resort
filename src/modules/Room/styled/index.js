@@ -1,7 +1,13 @@
-import RoomBlock from './RoomBlock';
+import ShadowBlock from './ShadowBlock';
 import RoomImgBlock from './RoomImgBlock';
-import RoomInfo from './RoomInfo';
-import RoomLink from './RoomLink';
-import RoomPriceBlock from './RoomPriceBlock';
+import TypographyInfo from './TypographyInfo';
+import FadeCenterLink from './FadeCenterLink';
+import PriceBlock from './PriceBlock';
 
-export { RoomBlock, RoomImgBlock, RoomInfo, RoomLink, RoomPriceBlock };
+export {
+  ShadowBlock,
+  RoomImgBlock,
+  TypographyInfo,
+  FadeCenterLink,
+  PriceBlock
+};

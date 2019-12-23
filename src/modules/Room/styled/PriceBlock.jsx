@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Block from 'components/Block';
 
-const RoomPriceBlock = styled.div`
+const PriceBlock = styled(Block)`
   position: absolute;
   top: 0;
   left: 0;
@@ -20,4 +21,4 @@ const RoomPriceBlock = styled.div`
   }
 `;
 
-export default RoomPriceBlock;
+export default PriceBlock;

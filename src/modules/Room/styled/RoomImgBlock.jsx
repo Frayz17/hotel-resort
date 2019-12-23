@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import RoomLink from './RoomLink';
-import RoomPriceBlock from './RoomPriceBlock';
+import FadeCenterLink from './FadeCenterLink';
+import PriceBlock from './PriceBlock';
 
 const RoomImgBlock = styled.div`
   position: relative;
@@ -19,11 +19,11 @@ const RoomImgBlock = styled.div`
     opacity: 0.3;
   }
 
-  &:hover ${RoomPriceBlock} {
+  &:hover ${PriceBlock} {
     opacity: 0;
   }
 
-  &:hover ${RoomLink} {
+  &:hover ${FadeCenterLink} {
     transform: translate(-50%, -50%) scale(1);
   }
 `;

@@ -1,9 +1,10 @@
 import Context, {
   RoomProvider,
   RoomConsumer,
-  RoomContext
+  RoomContext,
+  withRoomConsumer
 } from './Context.jsx';
 
 export default Context;
 
-export { RoomProvider, RoomConsumer, RoomContext };
+export { RoomProvider, RoomConsumer, RoomContext, withRoomConsumer };

@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  RoomBlock,
-  RoomInfo,
+  ShadowBlock,
+  TypographyInfo,
   RoomImgBlock,
-  RoomLink,
-  RoomPriceBlock
+  FadeCenterLink,
+  PriceBlock
 } from './styled';
 import defaultImg from 'assets/images/room-1.jpeg';
 
@@ -12,19 +12,19 @@ export default React.memo(({ room }) => {
   const { name, slug, images, price } = room;
 
   return (
-    <RoomBlock>
+    <ShadowBlock>
       <RoomImgBlock>
-        <img src={images[0] || defaultImg} alt="single room" />
+        <img src={images[0] || defaultImg} alt='single room' />
 
-        <RoomPriceBlock>
+        <PriceBlock>
           <h6>${price}</h6>
           <p>per night</p>
-        </RoomPriceBlock>
+        </PriceBlock>
 
-        <RoomLink to={`/rooms/${slug}`}>features</RoomLink>
+        <FadeCenterLink to={`/rooms/${slug}`}>features</FadeCenterLink>
 
-        <RoomInfo>{name}</RoomInfo>
+        <TypographyInfo>{name}</TypographyInfo>
       </RoomImgBlock>
-    </RoomBlock>
+    </ShadowBlock>
   );
 });

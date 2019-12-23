@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const RoomBlock = styled.div`
+const ShadowBlock = styled.div`
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 
@@ -9,4 +9,4 @@ const RoomBlock = styled.div`
   }
 `;
 
-export default RoomBlock;
+export default ShadowBlock;
