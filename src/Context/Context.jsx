@@ -2,16 +2,16 @@ import React from 'react';
 import items from './data';
 import formatData from './formatData';
 import getRoom from './getRoom';
+import filterRooms from './filterRooms';
 
 const RoomContext = React.createContext();
 
 export default function RoomProvider({ children }) {
-  const [roomsState, setRoomsState] = React.useState({
-    rooms: [],
-    sortedRooms: [],
-    featuredRooms: [],
-    loading: true,
-    //
+  const [rooms, setRooms] = React.useState([]);
+  const [sortedRooms, setSortedRooms] = React.useState([]);
+  const [featuredRooms, setFeaturedRooms] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [roomProperties, setRoomProperties] = React.useState({
     type: 'all',
     capacity: 1,
     price: 0,
@@ -30,12 +30,19 @@ export default function RoomProvider({ children }) {
     //
     const maxPrice = Math.max(...rooms.map((item) => item.price));
     const maxSize = Math.max(...rooms.map((item) => item.size));
-    setRoomsState({
-      rooms,
-      featuredRooms,
-      sortedRooms: rooms,
-      loading: false,
-      //
+
+    setRooms(rooms);
+    setSortedRooms(rooms);
+    setFeaturedRooms(featuredRooms);
+    setLoading(false);
+    setRoomProperties({
+      type: 'all',
+      capacity: 1,
+      minPrice: 0,
+      minSize: 0,
+      breakfast: false,
+      pets: false,
+
       price: maxPrice,
       maxPrice,
       maxSize
@@ -44,63 +51,18 @@ export default function RoomProvider({ children }) {
 
   // onMount
   React.useEffect(() => {
-    // filterRooms();
-  }, []);
-
-  const filterRooms = () => {
-    let {
-      rooms,
-      type,
-      capacity,
-      price,
-      minSize,
-      maxSize,
-      breakfast,
-      pets
-    } = roomsState;
-
-    let tempRooms = [...rooms];
-    // transform values
-    // get capacity
-    capacity = parseInt(capacity);
-    price = parseInt(price);
-    // filter by type
-    if (type !== 'all') {
-      tempRooms = tempRooms.filter((room) => room.type === type);
+    if (rooms.length > 0) {
+      setSortedRooms(filterRooms(rooms, roomProperties));
     }
-    // filter by capacity
-    if (capacity !== 1) {
-      tempRooms = tempRooms.filter((room) => room.capacity >= capacity);
-    }
-    // filter by price
-    tempRooms = tempRooms.filter((room) => room.price <= price);
-    //filter by size
-    tempRooms = tempRooms.filter(
-      (room) => room.size >= minSize && room.size <= maxSize
-    );
-    //filter by breakfast
-    if (breakfast) {
-      tempRooms = tempRooms.filter((room) => room.breakfast === true);
-    }
-    //filter by pets
-    if (pets) {
-      tempRooms = tempRooms.filter((room) => room.pets === true);
-    }
-
-    setRoomsState({
-      ...roomsState,
-      sortedRooms: tempRooms
-    });
-  };
+  }, [roomProperties, rooms]);
 
   const handleChange = (event) => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
-    console.log(name, value);
 
-    setRoomsState({
-      ...roomsState,
+    setRoomProperties({
+      ...roomProperties,
       [name]: value
     });
 
@@ -110,11 +72,14 @@ export default function RoomProvider({ children }) {
   return (
     <RoomContext.Provider
       value={{
-        ...roomsState,
+        rooms: [...rooms],
+        sortedRooms: [...sortedRooms],
+        featuredRooms: [...featuredRooms],
+        loading: loading,
+        ...roomProperties,
         getRoom,
         handleChange
-      }}
-    >
+      }}>
       {children}
     </RoomContext.Provider>
   );

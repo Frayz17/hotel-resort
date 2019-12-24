@@ -1,6 +1,5 @@
-const filterRooms = (roomsState) => {
-  const {
-    rooms,
+const filterRooms = (rooms, roomProperties) => {
+  let {
     type,
     capacity,
     price,
@@ -8,9 +7,10 @@ const filterRooms = (roomsState) => {
     maxSize,
     breakfast,
     pets
-  } = roomsState;
+  } = roomProperties;
 
   let tempRooms = [...rooms];
+
   // transform values
   // get capacity
   capacity = parseInt(capacity);
@@ -38,10 +38,7 @@ const filterRooms = (roomsState) => {
     tempRooms = tempRooms.filter((room) => room.pets === true);
   }
 
-  setRoomsState({
-    ...roomsState,
-    sortedRooms: tempRooms
-  });
+  return tempRooms;
 };
 
 export default filterRooms;
