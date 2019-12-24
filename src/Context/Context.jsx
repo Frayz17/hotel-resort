@@ -42,6 +42,11 @@ export default function RoomProvider({ children }) {
     });
   }, []);
 
+  // onMount
+  React.useEffect(() => {
+    // filterRooms();
+  }, []);
+
   const filterRooms = () => {
     let {
       rooms,
@@ -94,13 +99,12 @@ export default function RoomProvider({ children }) {
     const name = target.name;
     console.log(name, value);
 
-    setRoomsState(
+    setRoomsState({
       ...roomsState,
-      {
-        [name]: value
-      },
-      filterRooms
-    );
+      [name]: value
+    });
+
+    return value;
   };
 
   return (

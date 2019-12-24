@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.input`
   width: 40%;
   padding: 0.2rem;
   border: 1px solid var(--mainBlack);
