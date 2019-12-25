@@ -1,5 +1,5 @@
-const getRoom = (slug) => {
-  const tempRooms = [...this.state.rooms];
+const getRoom = (slug, rooms) => {
+  const tempRooms = [...rooms];
   const room = tempRooms.find((room) => room.slug === slug);
   return room;
 };

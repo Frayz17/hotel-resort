@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Title4 } from 'components/Title';
+import { TypographyTitle4 } from 'components/Typography';
 
-const StyledTitle4 = styled(Title4)`
+const StyledTitle4 = styled(TypographyTitle4)`
   font-size: 2rem;
   letter-spacing: var(--mainSpacing);
   text-transform: capitalize;

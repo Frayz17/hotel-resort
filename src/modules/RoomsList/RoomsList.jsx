@@ -16,7 +16,7 @@ const RoomsList = ({ rooms }) => {
     );
   }
   return (
-    <Section style={{ padding: '5rem 0' }}>
+    <Section>
       <BlockCenter>
         {rooms.map((item) => {
           return <Room key={item.id} room={item} />;

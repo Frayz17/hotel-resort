@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Menu from 'modules/Menu';
 import { Home, NotFound, Rooms, SingleRoom } from 'routes';
+import Footer from 'modules/Footer';
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
         <Route exact path='/rooms/:slug'>
           <SingleRoom />
         </Route>
-        <Route path='*'>
+        <Route>
           <NotFound />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }

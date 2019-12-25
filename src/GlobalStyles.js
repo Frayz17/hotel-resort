@@ -19,7 +19,13 @@ export default createGlobalStyle`
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 body {
+
+}
+#root {
+  position: relative;
+  min-height: 100vh;
   padding-top: 66px;
+  padding-bottom: 50px; 
   color: var(--mainBlack);
   background: var(--mainWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;

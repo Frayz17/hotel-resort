@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { RoomContext } from 'Context';
 
 import Section from 'components/Section';
-import Block, { Blockflex } from 'components/Block';
+import Block, { BlockFlex } from 'components/Block';
 import SectionTitle from 'modules/SectionTitle';
 import {
   FilterForm,
@@ -53,7 +53,7 @@ const RoomsFilter = ({ rooms }) => {
     </option>
   ));
   return (
-    <Section style={{ padding: '5rem 0' }}>
+    <Section>
       <SectionTitle title='search rooms' />
       <FilterForm>
         {/* select type */}
@@ -99,7 +99,7 @@ const RoomsFilter = ({ rooms }) => {
         {/* size */}
         <FormGroup>
           <FormGroupLabel htmlFor='price'>room size </FormGroupLabel>
-          <Blockflex>
+          <BlockFlex>
             <SizeInput
               type='number'
               name='minSize'
@@ -112,7 +112,7 @@ const RoomsFilter = ({ rooms }) => {
               value={maxSize}
               onChange={handleChange}
             />
-          </Blockflex>
+          </BlockFlex>
         </FormGroup>
         {/* end of select type */}
         {/* extras */}

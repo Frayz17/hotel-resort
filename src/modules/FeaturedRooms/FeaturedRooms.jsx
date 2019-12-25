@@ -16,7 +16,7 @@ export default React.memo(() => {
   });
 
   return (
-    <Section style={{ padding: '5rem 0' }}>
+    <Section>
       <SectionTitle title='featured rooms' />
       <FrWrapper>{loading ? <Loading /> : rooms}</FrWrapper>
     </Section>
