@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import logo from 'assets/images/logo.svg';
-import Image from 'components/Image';
 import {
   NavigationBar,
   LinksBox,
@@ -23,7 +22,7 @@ export default () => {
       <NavContainer>
         <NavHeader>
           <NavLink to='/'>
-            <Image src={logo} alt='logo' />
+            <img src={logo} alt='logo' />
           </NavLink>
           <NavButton type='button' onClick={handleToggle}>
             <NavIcon />
