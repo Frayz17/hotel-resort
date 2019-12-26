@@ -8,7 +8,7 @@ import GlobalStyles from './GlobalStyles';
 
 ReactDOM.render(
   <RoomProvider>
-    <Router>
+    <Router basename="/hotel-resort/">
       <App />
       <GlobalStyles />
     </Router>
