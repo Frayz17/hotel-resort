@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/hotel-resort/static/js/main.e3801943.chunk.js",
-    "main.js.map": "/hotel-resort/static/js/main.e3801943.chunk.js.map",
+    "main.js": "/hotel-resort/static/js/main.c25a8b7f.chunk.js",
+    "main.js.map": "/hotel-resort/static/js/main.c25a8b7f.chunk.js.map",
     "runtime-main.js": "/hotel-resort/static/js/runtime-main.05a33683.js",
     "runtime-main.js.map": "/hotel-resort/static/js/runtime-main.05a33683.js.map",
     "static/js/2.643f93a7.chunk.js": "/hotel-resort/static/js/2.643f93a7.chunk.js",
     "static/js/2.643f93a7.chunk.js.map": "/hotel-resort/static/js/2.643f93a7.chunk.js.map",
     "index.html": "/hotel-resort/index.html",
-    "precache-manifest.b7093ab6df94dd96b18a8668ad046be2.js": "/hotel-resort/precache-manifest.b7093ab6df94dd96b18a8668ad046be2.js",
+    "precache-manifest.4d30cb44d5e7c15c0b280580a6fa8593.js": "/hotel-resort/precache-manifest.4d30cb44d5e7c15c0b280580a6fa8593.js",
     "service-worker.js": "/hotel-resort/service-worker.js",
     "static/js/2.643f93a7.chunk.js.LICENSE": "/hotel-resort/static/js/2.643f93a7.chunk.js.LICENSE",
     "static/media/defaultBcg.jpeg": "/hotel-resort/static/media/defaultBcg.224c2bf3.jpeg",
@@ -33,6 +33,6 @@
   "entrypoints": [
     "static/js/runtime-main.05a33683.js",
     "static/js/2.643f93a7.chunk.js",
-    "static/js/main.e3801943.chunk.js"
+    "static/js/main.c25a8b7f.chunk.js"
   ]
 }
